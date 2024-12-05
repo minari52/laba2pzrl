@@ -5,7 +5,7 @@
 #include "calc.h"
 
 void print_usage() {
-    printf("Usage: ./cmdcalc operand1 operator operand2 ... -k key\n");
+    printf("Usage: ./calc operand1 operator operand2 ... -k key\n");
     printf("Operators: +, -, *, %%\n");
 }
 
@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
             char operator = argv[i + 1][0];
             int operand2 = atoi(argv[i + 2]);
             results[result_count++] = calculate(operand1, operator, operand2);
-            printf("Ответ №%d: %d\n", result_count, results[result_count - 1]);
+            printf("answer №%d: %d\n", result_count, results[result_count - 1]);
             i += 2;
         } else {
             printf("Error: Insufficient arguments for an expression\n");
@@ -44,7 +44,7 @@ int main(int argc, char *argv[]) {
 
     char decrypted[result_count + 1];
     decrypt_results(results, result_count, key, decrypted);
-    printf("Результирующая строка: %s\n", decrypted);
+    printf("Result string: %s\n", decrypted);
 
     return 0;
 }

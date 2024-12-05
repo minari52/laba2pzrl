@@ -18,6 +18,7 @@ int calculate(int operand1, char operator, int operand2) {
     }
 }
 
+
 void decrypt_results(int *results, int count, int key, char *output) {
     for (int i = 0; i < count; i++) {
         output[i] = (char)(results[i] - key);
