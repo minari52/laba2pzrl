@@ -13,3 +13,5 @@ calc.o: calc.c calc.h
  
 clean: 
 	rm -rf *.o main
+.PHONY: phony #This is a dummy phony target 
+phony:
